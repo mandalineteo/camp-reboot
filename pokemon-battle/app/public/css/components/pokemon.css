@@ -4,6 +4,12 @@
   margin: 2rem auto 0;
   aspect-ratio: 1 / 1;
   background-color: white;
+  position: relative;
+}
+
+.active-pokemon img {
+  height: 100%;
+  width: 100%;
 }
 
 .pokemon {
@@ -13,4 +19,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.pokemon img.dead,
+.active-pokemon img.dead {
+  filter: grayscale(1);
+  opacity: 0.8;
+}
+
+.pokemon .life,
+.active-pokemon .life {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: var(--bs-success);
+  transition: 200ms;
+}
+
+.pokemon .life.warning,
+.active-pokemon .life.warning {
+  background-color: var(--bs-warning);
+}
+
+.pokemon .life.danger,
+.active-pokemon .life.danger {
+  background-color: var(--bs-danger);
 }

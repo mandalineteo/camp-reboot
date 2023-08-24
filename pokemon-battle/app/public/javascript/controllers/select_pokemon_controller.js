@@ -1,5 +1,5 @@
 import { Controller } from "stimulus";
-import pokemonList from "../pokemons.js";
+import pokemonList from "../utils/pokemons.js";
 
 export default class extends Controller {
   connect() {

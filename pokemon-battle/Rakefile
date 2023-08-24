@@ -1,0 +1,60 @@
+require_relative './config/application'
+require 'sinatra/activerecord/rake'
+require 'rspec/core/rake_task'
+require 'rspec'
+
+RSpec::Core::RakeTask.new(:spec)
+
+def reset_db
+  puts "Recreating test database..\n\n"
+
+  config = ActiveRecord::Base.configurations.configs_for(env_name: 'test')[0]
+  ActiveRecord::Tasks::DatabaseTasks.drop(config)
+  ActiveRecord::Tasks::DatabaseTasks.create(config)
+  Rake::Task['db:test:migrate'].invoke
+end
+
+def require_test_env_message
+  puts '!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+  puts "To run test suite:\n\n"
+  puts "   RACK_ENV=test rake\n\n"
+  puts '!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+end
+
+namespace :db do
+  task :load_config do
+    require './app/app'
+  end
+
+  namespace :create do
+    desc 'Create the development database'
+    task :dev do
+      config = ActiveRecord::Base.configurations.configs_for(env_name: 'development')[0]
+      ActiveRecord::Tasks::DatabaseTasks.create(config)
+    end
+  end
+
+  namespace :test do
+    desc 'Run migrations for the test db'
+    task :migrate do
+      print `RACK_ENV=test rake db:migrate`
+    end
+  end
+
+  namespace :drop do
+    desc 'Drop the development database'
+    task :dev do
+      config = ActiveRecord::Base.configurations.configs_for(env_name: 'development')[0]
+      ActiveRecord::Tasks::DatabaseTasks.drop(config)
+    end
+  end
+end
+
+task :default do
+  if ENV['RACK_ENV'] == 'test'
+    reset_db
+    Rake::Task['spec'].invoke
+  else
+    require_test_env_message
+  end
+end

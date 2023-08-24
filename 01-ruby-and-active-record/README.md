@@ -9,12 +9,6 @@ bundle install
 RACK_ENV=test rake
 ```
 
----
-
-### End Goal
-
-We're going to create an app that allows 2 people to select a team of 3 pokemons and battle each other! It will utilise everything that we have learnt so far. Ruby, the MVC framework, Sinatra, JavaScript and, yes, **Stimulus**!
-
 ### Instructions
 
 As there wasn't enough time for a full set up, the tests are going to be run differently. To run the test suite, type `RACK_ENV=test rake` in your terminal. If you forget, don't worry I've made the terminal scream at you. The rake will drop and spin up it's own test database and run the migrations you wrote. Don't worry about all the output that you will see in the terminal.

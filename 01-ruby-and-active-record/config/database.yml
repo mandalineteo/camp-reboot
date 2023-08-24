@@ -1,0 +1,7 @@
+development:
+  adapter: sqlite3
+  database: db/pokemon_battle_development.sqlite3
+
+test:
+  adapter: sqlite3
+  database: spec/db/pokemon_battle_test.sqlite3

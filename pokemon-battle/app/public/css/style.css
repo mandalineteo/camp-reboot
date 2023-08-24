@@ -1,0 +1,10 @@
+/* Import component styles */
+@import url("./components/index.css");
+
+/* Import page styles */
+@import url("./pages/index.css");
+
+/* general styles and helpers */
+body {
+  background-color: #e9e9e9;
+}

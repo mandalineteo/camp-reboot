@@ -6,6 +6,7 @@ class CreatePokemons < ActiveRecord::Migration[7.0]
       t.integer :damage
       t.integer :defence
       t.integer :speed
+      t.string :image
       t.references :player, null: false, foreign_key: true
       t.timestamps
     end

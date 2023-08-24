@@ -7,6 +7,7 @@ FactoryBot.define do
     damage { 20 }
     defence { 10 }
     speed { 30 }
+    image { 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'}
     association :player, factory: :zohan
   end
 
@@ -16,6 +17,7 @@ FactoryBot.define do
     damage { 20 }
     defence { 10 }
     speed { 30 }
+    image { 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'}
   end
 
   factory :fast_pokemon, class: 'Pokemon' do
@@ -24,6 +26,7 @@ FactoryBot.define do
     damage { 20 }
     defence { 10 }
     speed { 150 }
+    image { 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'}
     association :player, factory: :zohan
   end
 
@@ -33,6 +36,7 @@ FactoryBot.define do
     damage { 20 }
     defence { 10 }
     speed { 30 }
+    image { 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'}
     association :player, factory: :zohan
   end
 

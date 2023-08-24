@@ -13,37 +13,29 @@ describe Pokemon do
       expect(pokemon).to be_a(Pokemon)
     end
 
-    # it 'should allow it\'s name to be readable' do
-    #   expect(pokemon.name).to eq('Pikachu')
-    # end
+    it 'should initialize with a name property' do
+      expect(pokemon.name).to eq('Pikachu')
+    end
 
-    # it 'should initialize with a health attribute' do
-    #   expect(pokemon.instance_variable_get(:@health)).to eq(health)
-    # end
+    it 'should initialize with a health property' do
+      expect(pokemon.health).to be_an(Integer)
+    end
 
-    # it 'should not be able to read the health attribute' do
-    #   expect { pokemon.health }.to raise_error(NoMethodError)
-    # end
+    it 'should initialize with a damage property' do
+      expect(pokemon.damage).to be_an(Integer)
+    end
 
-    # it 'should initialize with a damage attribute' do
-    #   expect(pokemon.instance_variable_get(:@damage)).to eq(damage)
-    # end
+    it 'should initialize with a defence property' do
+      expect(pokemon.defence).to be_an(Integer)
+    end
 
-    # it 'should not be able to read the damage attribute' do
-    #   expect { pokemon.damage }.to raise_error(NoMethodError)
-    # end
+    it 'should initialize with a speed property' do
+      expect(pokemon.speed).to be_an(Integer)
+    end
 
-    # it 'should initialize with a defence attribute' do
-    #   expect(pokemon.instance_variable_get(:@defence)).to eq(defence)
-    # end
-
-    # it 'should not be able to read the defence attribute' do
-    #   expect { pokemon.defence }.to raise_error(NoMethodError)
-    # end
-
-    # it 'should initialize with a speed attribute' do
-    #   expect(pokemon.instance_variable_get(:@speed)).to eq(speed)
-    # end
+    it 'should initialize with a image property' do
+      expect(pokemon.image).to be_a(String)
+    end
 
     # it 'should not be able to read the speed attribute' do
     #   expect { pokemon.speed }.to raise_error(NoMethodError)

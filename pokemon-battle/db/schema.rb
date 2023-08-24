@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_24_144017) do
     t.integer "damage"
     t.integer "defence"
     t.integer "speed"
+    t.string "image"
     t.integer "player_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

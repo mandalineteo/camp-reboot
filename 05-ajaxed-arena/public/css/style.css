@@ -1,0 +1,27 @@
+body {
+  background-color: #e9e9e9;
+}
+
+.active-pokemon {
+  border: 1px solid gray;
+  width: 300px;
+  margin: 2rem auto 0;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+}
+
+.pokemon {
+  aspect-ratio: 1 / 1;
+  border: 1px solid gray;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attack-text {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}

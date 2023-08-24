@@ -1,4 +1,4 @@
-require 'sinatra'
+require "sinatra"
 require "sinatra/activerecord"
 require 'pry-byebug'
 require 'sqlite3'

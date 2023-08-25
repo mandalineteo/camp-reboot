@@ -98,7 +98,7 @@ Return `true` or `false` accordingly.
 
 ⚠️ this one is gonna take awhile. Read the instructions **extremely carefully** now.
 
-We are writing this as a **_class method_**. What are class methods again? Have a read if you forgot.
+We are writing this as a **_class method_**. What are class methods again? [Have a look again if you forgot.](https://kitt.lewagon.com/camps/1375/lectures/02-OOP%2F02-OO-Advanced#source)
 
 What this method should do is to call the [PokeApi](https://pokeapi.co/) and fetch the details of the pokemon. But there are a few different endpoints and we're going to get back **A LOT** of data. We don't need most of them, so let's sift through and find only what we need.
 

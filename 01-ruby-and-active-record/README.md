@@ -34,6 +34,7 @@ Which translates to a `Game` has many `Players`, and a `Player` has many `Pokemo
 # Our Database
 
 Let's create our db migration files in `db/migrate` to match the following diagram
+![Screenshot 2023-08-25 at 7 12 28 AM](https://github.com/AshIgnYeo/camp-reboot/assets/65697575/bd30985f-e126-4b44-a379-ada987a868e2)
 
 Some helper methods for you, but please **read the note below before starting to use them!**
 
@@ -63,6 +64,10 @@ Also a relatively simple one. We just need to get our associations right and hav
 ### Pokemon
 
 It wouldn't stay easy for long would it? Our pokemon needs to initialise with a few properties. `name`, `health`, `damage`, `defence`, `speed`, and also an `image` which will be stored as a string.
+
+Methods help to clean up our code and make them a lot more readable, it also can help us to write some logic to reuse. As our pokemons are going into battle, let's write some methods that can help the funcionality. 
+
+
 
 ---
 

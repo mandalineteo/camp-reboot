@@ -8,6 +8,7 @@ cd ~/code/$GITHUB_USERNAME/
 git clone git@github.com:AshIgnYeo/camp-reboot.git .
 cd camp-reboot
 rm -rf .git
+git init
 gh repo create --public --source=.
 git add . && git commit -m 'Cloned challenge repo'
 git push origin main

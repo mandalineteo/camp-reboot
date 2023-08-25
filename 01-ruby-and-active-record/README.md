@@ -65,16 +65,22 @@ Also a relatively simple one. We just need to get our associations right and hav
 
 It wouldn't stay easy for long would it? Our pokemon needs to initialise with a few properties. `name`, `health`, `damage`, `defence`, `speed`, and also an `image` which will be stored as a string.
 
-**Pokemon methods**
+#### Pokemon methods
+
 Methods help to clean up our code and make them a lot more readable, it also can help us to write some logic to reuse. As our pokemons are going into battle, let's write some methods that can help the funcionality.
 
-**#attack**
+##### #attack
+
 To make the game more interesting, when we attack, we attack based on the `damage` attribute of the pokemon, but we also want to vary it a bit. Write a method that will return an Integer that is plus/minus 10 of the damage.
 e.g. if the pokemons damage is `50`, `pokemon.attack` will return a number between 40 to 60.
 
-**#take_damage**
-**#miss?**
-**#ko?**
+##### #take_damage
+
+Our pokemons are also going to take some damage, but that's what we have defence for! Our defence should be able to protect
+
+##### #miss?
+
+##### #ko?
 
 ---
 

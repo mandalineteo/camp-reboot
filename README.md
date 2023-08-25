@@ -5,7 +5,7 @@ To get this challenge into your own folder, run the following command in your te
 ```
 export GITHUB_USERNAME=`gh api user | jq -r '.login'`
 cd ~/code/$GITHUB_USERNAME/
-git clone git@github.com:AshIgnYeo/camp-reboot.git .
+git clone git@github.com:AshIgnYeo/camp-reboot.git camp-reboot
 cd camp-reboot
 rm -rf .git
 git init

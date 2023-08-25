@@ -1,0 +1,83 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-10 mx-auto">
+      <h1>New Game</h1>
+      <div class="infobox">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum quisquam laudantium hic! Provident officiis libero voluptates tempora sapiente. Adipisci saepe vero libero incidunt quis voluptas ipsam! Voluptate nisi ullam excepturi?
+      </div>
+
+      <form action='/games' method='post'>
+        <div class="row">
+
+          <div class="col-md-6">
+            <h4>Player 1</h4>
+            <div class="mb-5">
+              <label for="player_1_name" class="form-label">Player 1 name</label>
+              <input type="text" class="form-control" id="player_1_name" name="player_1_name" placeholder="Enter player 1 name">
+            </div>
+            <h4>Select Pokemon</h4>
+
+            <div class="mb-3">
+              <label for="player_1_pokemon_1" class="form-label">Pokemon 1</label>
+              <select data-controller="select-pokemon" class="form-select" id="player_1_pokemon_1" name="player_1_pokemon_1">
+                <option selected>Select Pokemon</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="player_1_pokemon_2" class="form-label">Pokemon 2</label>
+              <select data-controller="select-pokemon" class="form-select" id="player_1_pokemon_2" name="player_1_pokemon_2">
+                <option selected>Select Pokemon</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="player_1_pokemon_3" class="form-label">Pokemon 3</label>
+              <select data-controller="select-pokemon" class="form-select" id="player_1_pokemon_3" name="player_1_pokemon_3">
+                <option selected>Select Pokemon</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <h4>Player 2</h4>
+            <div class="mb-5">
+              <label for="player_2_name" class="form-label">Player 2 name</label>
+              <input type="text" class="form-control" id="player_2_name" name="player_2_name" placeholder="Enter player 2 name">
+            </div>
+
+            <h4>Select Pokemon</h4>
+
+            <div class="mb-3">
+              <label for="player_2_pokemon_1" class="form-label">Pokemon 1</label>
+              <select data-controller="select-pokemon" class="form-select" id="player_2_pokemon_1" name="player_2_pokemon_1">
+                <option selected>Select Pokemon</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="player_2_pokemon_2" class="form-label">Pokemon 2</label>
+              <select data-controller="select-pokemon" class="form-select" id="player_2_pokemon_2" name="player_2_pokemon_2">
+                <option selected>Select Pokemon</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="player_2_pokemon_3" class="form-label">Pokemon 3</label>
+              <select data-controller="select-pokemon" class="form-select" id="player_2_pokemon_3" name="player_2_pokemon_3">
+                <option selected>Select Pokemon</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="my-3">
+          <button type="submit" class="btn btn-primary btn-lg w-100">Battle!</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

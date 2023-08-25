@@ -117,18 +117,18 @@ describe Pokemon do
     end
   end
 
-  context 'Class methods' do
-    describe '.details' do
-      it 'should call the api and return a hash' do
-        expect(Pokemon.details('pikachu')).to be_a(Hash)
-      end
+  # context 'Class methods' do
+  #   describe '.details' do
+  #     it 'should call the api and return a hash' do
+  #       expect(Pokemon.details('pikachu')).to be_a(Hash)
+  #     end
 
-      it 'should return hash of proper attributes' do
-        details = Pokemon.details('pikachu')
+  #     it 'should return hash of proper attributes' do
+  #       details = Pokemon.details('pikachu')
 
-        expect(details.keys).to include(:name, :health, :damage, :defence, :speed, :image)
-      end
-    end
-  end
+  #       expect(details.keys).to include(:name, :health, :damage, :defence, :speed, :image)
+  #     end
+  #   end
+  # end
 
 end

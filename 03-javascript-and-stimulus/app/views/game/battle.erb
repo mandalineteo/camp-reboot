@@ -1,0 +1,60 @@
+<div class="container">
+  <h1 class="text-center mt-3 text-warning border-bottom border-secondary">Pokemon Arena</h1>
+
+  <div class="row vh-100" data-controller="battle" data-battle-game-id-value='<%= @game.id %>'>
+
+    <div class="loader" data-battle-target="loader">
+      <h2>Preparing battle...</h2>
+    </div>
+
+    <div class="col-6 border-end border-secondary">
+      <h2 class="text-center bg-primary text-white p-2"><%= @player1.name %></h2>
+
+      <div class="active-pokemon" id="player1-active-pokemon">
+        <img data-battle-target="p1Main" alt="">
+        <div data-battle-target="<%= "p1MainHp" %>" class="life"></div>
+      </div>
+      <div class="attack-text">Q to attack!</div>
+
+
+      <div class="row">
+
+        <% @player1.pokemons.each_with_index do |pokemon, index| %>
+          <div class="col-4">
+            <div class="pokemon">
+              <img data-battle-target="<%= "p1p#{1 + index}" %>" src="<%= pokemon.image %>" alt="<%= pokemon.name %>">
+              <div data-battle-target="<%= "p1p#{1 + index}Hp" %>" class="life"></div>
+            </div>
+            <div class="fw-bold text-center"> (Switch) <%= 1 + index %></div>
+          </div>
+        <% end %>
+
+      </div>
+
+    </div>
+
+    <div class="col-6">
+      <h2 class="text-center bg-primary text-white p-2"><%= @player2.name %></h2>
+
+      <div class="active-pokemon" id="player2-active-pokemon">
+        <img data-battle-target="p2Main" alt="">
+        <div data-battle-target="<%= "p2MainHp" %>" class="life"></div>
+      </div>
+      <div class="attack-text">P to attack!</div>
+
+      <div class="row">
+        <% @player2.pokemons.each_with_index do |pokemon, index| %>
+          <div class="col-4">
+            <div class="pokemon">
+              <img data-battle-target="<%= "p2p#{1 + index}" %>" src="<%= pokemon.image %>" alt="<%= pokemon.name %>">
+              <div data-battle-target="<%= "p2p#{1 + index}Hp" %>" class="life"></div>
+            </div>
+            <div class="fw-bold text-center"> (Switch) <%= 8 + index %></div>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div> <!-- ./row.vh-100 -->
+</div> <!-- ./container -->

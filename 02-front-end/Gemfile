@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'factory_bot'
+gem 'json'
+gem 'pry-byebug'
+gem 'rake'
+gem 'rerun'
+gem 'rest-client'
+gem 'rspec'
+gem 'sinatra-activerecord'
+gem 'sinatra-contrib'
+gem 'sqlite3'

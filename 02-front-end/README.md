@@ -4,7 +4,7 @@ Great job working on your Ruby and Active Records 🎉
 
 It's time to start building towards the Pokemon battle arena! 🥊
 
-### Setup
+## Setup
 
 Let's first pull over everything that you have done and open up the challenge page. Take the time to read what each line is doing. It's important to not blindly copy and paste but to **understand** what we're doing.
 
@@ -56,17 +56,20 @@ then we can visit our local development app at [localhost:4567](http://localhost
 
 Your task involves developing a user flow that includes two distinct screens.
 
+## Welcome Screen
+
 The first screen is designed to welcome our two players, setting the stage for the battles ahead from the root page [localhost:4567/](http://localhost:4567)
 
 Here is a guide on how the page could look.
 
--- image here --
+<img width="1440" alt="welcome page" src="https://github.com/AshIgnYeo/camp-reboot/assets/65697575/4c559bbd-aa50-44f8-8ff1-862f3d13d0b0">
+
 
 You could also use a background image behind the text box as a full page banner to make it more immersive, found in `images/arena.png`
 
-Feel free to copy the text below or come up with your own witty content. 😉
-
 The button on the page should link to the next page at [localhost:4567/games/new](http://localhost:4567/games/new), which follows the [RESTful naming conventions](https://en.wikipedia.org/wiki/Representational_state_transfer)
+
+Feel free to copy the text below or come up with your own witty content. 😉
 
 ```
                     -----------------------------------
@@ -86,9 +89,11 @@ The button on the page should link to the next page at [localhost:4567/games/new
                     -----------------------------------
 ```
 
+## New Game
 The second screen at `games/new` is where the players will make their choices and form their teams. After the welcome screen, each player will see a form like this:
 
--- image here --
+![image](https://github.com/AshIgnYeo/camp-reboot/assets/65697575/9b86530e-efb4-47b8-bfec-5e7fd7196fb6)
+
 
 demo content for the page:
 
@@ -131,7 +136,7 @@ Overhere we can utilise the [bootstrap forms](https://getbootstrap.com/docs/5.0/
 
 After both players have made their selections, one of the players will have to click the "Battle!" button. This will lead to the form creation page at `POST localhost:4567/games`, which we have not built yet!
 
-### Important notes:
+## Important notes:
 
 - For this challenge, there is no need to add any logic to the form yet. The aim is to have a front end that looks good. 😎 We will apply the logic in the following exercise!
 - The "Battle!" button should submit the form to `POST localhost:4567/games`. we will build this in the next exercise too!

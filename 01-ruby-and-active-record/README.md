@@ -76,7 +76,7 @@ e.g. if the pokemons damage is `50`, `pokemon.attack` will return a number betwe
 
 ##### #take_damage
 
-Our pokemons are also going to take some damage, but that's what we have defence for! ⛨ Our defence should be able to protect us from some damage. `take_damage` should reduce our damage by a random number, but that random number should never go above our defence!
+Our pokemons are also going to take some damage, but that's what we have defence for! ⛨ Our defence should be able to protect us from some damage. `take_damage` should reduce our health by a random number, but that random number should never be more than our defence!
 
 Also we can't have a negetive HP. So the lowest we should ever go is 0. I believe that's sad enough.
 

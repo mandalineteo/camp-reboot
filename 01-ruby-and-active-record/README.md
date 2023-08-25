@@ -4,7 +4,7 @@ to start the challenge, run the following code in your terminal
 
 ```
 export GITHUB_USERNAME=`gh api user | jq -r '.login'`
-cd ~/code/$GITHUB_USERNAME/camp-reboot/01-ruby-and-activerecord
+cd ~/code/$GITHUB_USERNAME/camp-reboot/01-ruby-and-active-record
 bundle install
 RACK_ENV=test rake
 ```
@@ -76,9 +76,15 @@ e.g. if the pokemons damage is `50`, `pokemon.attack` will return a number betwe
 
 ##### #take_damage
 
-Our pokemons are also going to take some damage, but that's what we have defence for! Our defence should be able to protect
+Our pokemons are also going to take some damage, but that's what we have defence for! ⛨ Our defence should be able to protect us from some damage. `take_damage` should reduce our damage by a random number, but that random number should never go above our defence!
+
+Also we can't have a negetive HP. So the lowest we should ever go is 0. I believe that's sad enough.
 
 ##### #miss?
+
+This is where speed is everything. The faster you are, the higher the chance `miss?` returns true.
+
+We will be pulling from an API later. For that reason we need to cater to the values that are being received. Speed values range from `0` to `180`. So let's calculate a percentage
 
 ##### #ko?
 

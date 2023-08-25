@@ -11,7 +11,7 @@ rm -rf .git
 git init
 gh repo create --public --source=.
 git add . && git commit -m 'Cloned challenge repo'
-git push origin main
+git push origin main    # change to master if your branch shows master
 ```
 
 this will clone the challenge repo to your computer and add it to your own github.

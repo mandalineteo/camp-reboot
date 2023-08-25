@@ -82,12 +82,30 @@ Also we can't have a negetive HP. So the lowest we should ever go is 0. I believ
 
 ##### #miss?
 
-This is where speed is everything. The faster you are, the higher the chance `miss?` returns true.
+This is where speed is everything. The faster the pokemon is, the higher the chance `miss?` returns `true`.
 
-We will be pulling from an API later. For that reason we need to cater to the values that are being received. Speed values range from `0` to `180`. So let's calculate a percentage
+We will be pulling from an API later. For that reason we need to cater to the values that are being received. Speed values range from `0` to `180`. So let's calculate a percentage against `200`.
+
+The question here is how do we calculate a percentage chance? 🤔
 
 ##### #ko?
 
+This one is as straightforward as they come. Is your pokemon still kicking? What's gonna represent that they are down for the count?
+
+Return `true` or `false` accordingly.
+
+##### .details
+
+⚠️ this one is gonna take awhile. Read the instructions **extremely carefully** now.
+
+We are writing this as a **_class method_**. What are class methods again? Have a read if you forgot.
+
+What this method should do is to call the [PokeApi](https://pokeapi.co/) and fetch the details of the pokemon. But there are a few different endpoints and we're going to get back **A LOT** of data. We don't need most of them, so let's sift through and find only what we need.
+
+> Welcome to the world of documentation and scanning through lines and lines of code. ⚡️
+
+💡 So why a **class method** and not an **instance method**? We're using the Class to find information we don't have about a particular pokemon. But instance methods require that we instantiate a pokemon already so an instance method is out. But since the method is doing something related to pokemon, it makes the most sense for it to belong to the `Pokemon` class which is why we make it a class method.
+
 ---
 
-All good? Great! Let's move on! 🚀
+All good? Great! Let's commit this challenge and move on! 🚀
